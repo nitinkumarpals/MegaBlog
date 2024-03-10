@@ -27,7 +27,7 @@ useEffect(() => {
 }, []);
 
   return !loading ? ( 
-    <div className="flex flex-wrap min-h-screen content-between bg-gray-500 text-center">
+    <div className="min-h-screen flex flex-wrap content-between bg-gray-400">
     <div className="w-full block">
     <Header />
     <main>
