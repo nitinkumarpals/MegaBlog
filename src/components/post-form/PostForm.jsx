@@ -39,6 +39,7 @@ export default function PostForm({PostForm}) {
       }
       else{
         const file = await appWriteService.uploadFile(data.image[0]);
+        //todo imporve this line
         if(file){
             const fileId = file.$id;
             data.featuredImage = fileId;
@@ -68,6 +69,7 @@ export default function PostForm({PostForm}) {
     },[]);
 
     useEffect(() => {
+        //watch react hook form se mila isliye isme callback h
       const subscription = watch((value,{name}) => {
        if(name === "title" ){
         setValue("slug", slugTransform(value.title), {
